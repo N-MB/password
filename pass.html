@@ -1,0 +1,57 @@
+<html>
+<head>
+<style>
+*{
+margin:0;
+}
+div.pw
+{
+padding:2px;
+text-align:center;
+font-size:25px;
+}
+input[type=text]
+{
+width:300px;
+height:40px;
+font-size:20px;
+}
+button
+{
+width:200px;
+height:40px;
+font-size:20px;
+background-color:blue;
+color:white;
+}
+fieldset
+{
+margin: 100px 300px ;
+width:50%;
+background-color: aliceblue;
+}
+</style>
+<script>
+function btn(){
+var chars="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqristuvwxyz1234567890!@#$%^&*()"
+var passwordlength=10;
+var password="";
+for(var i=0;i<passwordlength;i++){
+var randomNumber=Math.floor(Math.random()*chars.length);
+password+=chars.substring(randomNumber,randomNumber+1);
+}
+document.getElementById("inputfiled").value=password
+}
+</script>
+</head>
+<body>
+<div class="pw">
+<fieldset >
+<legend><h3>Password Generator</h3></legend>
+<label>Password*&nbsp:</label>
+<input type="text"  placeholder="password" id="inputfiled"><br><br>
+<button type="button" onclick="btn()" >password generate</button>
+</fieldset>
+</div>
+</body>
+</html>
